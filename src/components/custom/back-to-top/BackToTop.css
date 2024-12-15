@@ -1,0 +1,58 @@
+/* Container for the back-to-top button */
+.back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100px);
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 1000;
+  }
+  
+  /* Show the button */
+  .back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  /* Icon inside the button */
+  .icon {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    animation: bounce 1.5s infinite;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Hover effect */
+  .back-to-top:hover .icon {
+    transform: scale(1.2);
+  }
+  
+  /* Bounce animation for the icon */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+  
+  /* Hover effect for the button */
+  .back-to-top:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(76, 175, 80, 0.5);
+  }
+  

@@ -10,6 +10,7 @@ import Footer from "./components/layouts/footer/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { ToastContainer } from "react-toastify";
+import BackToTop from "./components/custom/back-to-top/BackToTop";
 
 AOS.init({
   duration: 1500, 
@@ -27,6 +28,7 @@ function App() {
       <Mention />
       <Pricing />
       <Footer />
+      <BackToTop />
       <ToastContainer />
     </>
   );

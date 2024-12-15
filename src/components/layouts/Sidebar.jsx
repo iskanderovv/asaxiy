@@ -1,4 +1,3 @@
-import React from "react";
 import Button from "../custom/button/Button";
 import Navs from "./navs/Navs";
 
@@ -12,7 +11,7 @@ export default function Sidebar() {
     >
       <div className="offcanvas-header">
         <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
-          Asaxiy
+          Landing
         </h5>
         <button
           type="button"

@@ -3,18 +3,25 @@ import Navs from "../navs/Navs";
 import "./Footer.css";
 
 const Footer = () => {
+  const socialLinks = [
+    { href: "#facebook", icon: "bi-facebook", label: "Facebook" },
+    { href: "#linkedin", icon: "bi-linkedin", label: "LinkedIn" },
+    { href: "#twitter", icon: "bi-twitter", label: "Twitter" },
+    { href: "#youtube", icon: "bi-youtube", label: "YouTube" },
+    { href: "#instagram", icon: "bi-instagram", label: "Instagram" },
+  ];
   return (
     <footer className="text-dark">
       <div className="container">
         {/* Top Row */}
-        <div className="row row-cols-3 align-items-center py-3">
-          <div className="text-center text-md-start">
-            <span>&copy; 2023 Yourcompany</span>
+        <div className="row align-items-center py-3">
+          <div className="text-center col-md-4 col-sm-12">
+            <h6>&copy; 2023 Yourcompany</h6>
           </div>
-          <div className="text-center ">
+          <div className="text-center col-md-4 col-sm-12">
             <h2>Landing</h2>
           </div>
-          <div className=" text-center text-md-end">
+          <div className="text-center col-md-4 col-sm-12">
             <Button title="Purchase now" />
           </div>
         </div>
@@ -23,27 +30,15 @@ const Footer = () => {
         <hr className="my-2" />
 
         {/* Bottom Navigation */}
-        <div
-          className="py-3 d-flex justify-content-between"
-        >
+        <div className="py-3 d-flex justify-content-md-between justify-content-center flex-wrap gap-2">
           <Navs />
           {/* Social Media Icons */}
           <div className="social-icons">
-            <a href="#facebook" className="text-dark mx-2">
-              <i className="bi bi-facebook"></i>
-            </a>
-            <a href="#linkedin" className="text-dark mx-2">
-              <i className="bi bi-linkedin"></i>
-            </a>
-            <a href="#twitter" className="text-dark mx-2">
-              <i className="bi bi-twitter"></i>
-            </a>
-            <a href="#youtube" className="text-dark mx-2">
-              <i className="bi bi-youtube"></i>
-            </a>
-            <a href="#instagram" className="text-dark mx-2">
-              <i className="bi bi-instagram"></i>
-            </a>
+            {socialLinks.map((link) => (
+              <a key={link.href} href={link.href} className="text-dark mx-2">
+                <i className={link.icon}></i>
+              </a>
+            ))}
           </div>
         </div>
       </div>

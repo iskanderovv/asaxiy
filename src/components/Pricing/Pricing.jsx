@@ -20,7 +20,9 @@ const Pricing = () => {
           <p className="pricing-section__tagline">UI Design Kit</p>
         </div>
         <p className="pricing-section__simple">See. One price. Simple.</p>
-        <Button title="Purchase now" onClick={() => onAlert()} />
+        <div className="d-flex justify-content-center">
+          <Button title="Purchase now" onClick={() => onAlert()} />
+        </div>
       </div>
     </section>
   );

@@ -1,4 +1,3 @@
-// Navbar.jsx
 import { useState, useEffect } from "react";
 import Button from "../../custom/button/Button";
 import Navs from "../navs/Navs";
@@ -10,7 +9,8 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) { // Adjust this threshold based on your preference
+      // Check the scroll position
+      if (window.scrollY > 50) {
         setSticky(true);
       } else {
         setSticky(false);
@@ -19,7 +19,7 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup the event listener on unmount
+    // Cleanup: remove the event listener on unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -27,19 +27,39 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`navbar navbar-expand-lg navbar-light fixed-top ${sticky ? "bg-white shadow-lg" : ""} py-2`}
+      className={`navbar navbar-expand-lg navbar-light py-2 ${
+        sticky ? "bg-white shadow-lg" : ""
+      }`}
+      style={{
+        position: sticky ? "fixed" : "relative",
+        top: 0,
+        width: "100%",
+        zIndex: 1000,
+      }}
     >
       <div className="container">
-        {/* Navbar content with flexbox to align logo and hamburger button */}
-        <div className="d-flex justify-content-between w-100 align-items-center">
-          {/* Logo */}
-          <a className="navbar-brand logo fs-3 text-dark font-bold" href="#">
-            Asaxiy
+        {/* Navbar content with flexbox to align items */}
+        <div className="d-flex justify-content-between w-100 align-items-center position-relative">
+          {/* Left Navs */}
+          <div className="d-flex">
+            <Navs className="d-none d-lg-flex" />
+          </div>
+
+          {/* Logo centered */}
+          <a
+            className="navbar-brand logo fs-4 fw-bold position-absolute"
+            style={{ left: "50%", transform: "translateX(-50%)" }}
+            href="#"
+          >
+            Landing
           </a>
 
-          {/* Hamburger button positioned on the right */}
+          {/* Right Buy Now button */}
+          <Button title="Buy Now" className="d-none d-lg-block" />
+
+          {/* Hamburger button */}
           <button
-            className="navbar-toggler ms-auto"
+            className="navbar-toggler d-lg-none ms-auto"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasNavbar"
@@ -49,17 +69,7 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Main navbar content */}
-        <div
-          className="collapse navbar-collapse d-flex justify-content-between w-100"
-          id="navbarSupportedContent"
-        >
-          <Navs className="d-none d-lg-flex" />
-          {/* The 'Buy Now' button will be hidden on smaller screens */}
-          <Button title="Buy Now" className="d-none d-lg-block" />
-        </div>
-
-        {/* Offcanvas Menu Component */}
+        {/* Sidebar */}
         <Sidebar />
       </div>
     </nav>
