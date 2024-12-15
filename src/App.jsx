@@ -6,7 +6,7 @@ import Mention from "./components/Mention";
 import Pricing from "./components/Pricing/Pricing";
 import Footer from "./components/layouts/footer/Footer";
 import BackToTop from "./components/custom/back-to-top/BackToTop";
-import HeroNavbarGrid from "./components/hero-navbar-grid/Hero-Navbar-Grid";
+import HeroNavbarGrid from "./components/hero-navbar-grid/HeroNavbarGrid";
 import { ToastContainer } from "react-toastify";
 
 import AOS from "aos";
