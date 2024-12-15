@@ -1,22 +1,21 @@
 import "./App.css";
 import Fluencer from "./components/Fluencer";
-import HeroNavbarGrid from "./components/Hero-Navbar-Grid/Hero-Navbar-Grid";
 import Message from "./components/Message";
 import Social from "./components/Social";
 import Mention from "./components/Mention";
 import Pricing from "./components/Pricing/Pricing";
 import Footer from "./components/layouts/footer/Footer";
+import BackToTop from "./components/custom/back-to-top/BackToTop";
+import HeroNavbarGrid from "./components/hero-navbar-grid/Hero-Navbar-Grid";
+import { ToastContainer } from "react-toastify";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { ToastContainer } from "react-toastify";
-import BackToTop from "./components/custom/back-to-top/BackToTop";
 
 AOS.init({
-  duration: 1500, 
-  once: false,    
+  duration: 1500,
+  once: false,
 });
-
 
 function App() {
   return (
