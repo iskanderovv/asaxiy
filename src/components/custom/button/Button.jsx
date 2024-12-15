@@ -1,10 +1,10 @@
 import "./Button.css";
-export default function Button({ title }) {
+export default function Button({ title, onClick, className }) {
   return (
-    <div className="wrapper-btn">
-      <a href="#">
+    <div className={`btn wrapper-btn ${className}`}>
+      <button onClick={onClick}>
         <span>{title}</span>
-      </a>
+      </button>
     </div>
   );
 }

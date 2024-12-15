@@ -1,8 +1,8 @@
-.wrapper-btn a {
+.wrapper-btn button {
   display: block;
   width: 170px;
   height: 35px;
-  line-height: 35px;
+  line-height: 30px;
   font-size: 16px;
   text-decoration: none;
   color: #111b47;
@@ -14,12 +14,12 @@
   border-radius: 5px;
 }
 
-.wrapper-btn a span {
+.wrapper-btn button span {
   position: relative;
   z-index: 2;
 }
 
-.wrapper-btn a:after {
+.wrapper-btn button:after {
   position: absolute;
   content: "";
   top: 0;
@@ -30,11 +30,11 @@
   transition: all 0.35s;
 }
 
-.wrapper-btn a:hover {
+.wrapper-btn button:hover {
   color: #fff;
 }
 
-.wrapper-btn a:hover:after {
+.wrapper-btn button:hover:after {
   width: 100%;
   background: #0d1a35;
 }
