@@ -1,6 +1,6 @@
 import Hero from "../hero/Hero";
 import Navbar from "../layouts/Navbar/Navbar";
-import "./Hero-Navbar-Grid.css";
+import "./HeroNavbarGrid.css";
 
 export default function HeroNavbarGrid() {
   return (
