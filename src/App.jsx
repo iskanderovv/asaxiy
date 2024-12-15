@@ -20,7 +20,7 @@ AOS.init({
 function App() {
   return (
     <>
-      <HeroNavbarGrid />
+    <HeroNavbarGrid />
       <Message />
       <Fluencer />
       <Social />
