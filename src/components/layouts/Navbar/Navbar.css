@@ -1,0 +1,9 @@
+.nav-link {
+  font-size: 14px !important;
+  color: var(--text-color) !important;
+}
+
+.logo {
+  color: var(--logo-color) !important;
+  font-weight: 900;
+}
